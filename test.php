@@ -5,9 +5,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="cd /var/www/net302/website.css">
+<link rel="stylesheet" href="/var/www/net302/website.css">
 </head>
 
+<body>
 <div class="header">
   <h1>My Website</h1>
   <p>Resize the browser window to see the effect.</p>
