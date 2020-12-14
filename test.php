@@ -6,10 +6,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href=".../var/www/net302/webiste.css" type="text/css">
-</head>
-
 <body>
+
+<link rel="stylesheet" href=".../var/www/net302/webiste.css" type="text/css">
+
 <div class="header">
   <h1>My Website</h1>
   <p>Resize the browser window to see the effect.</p>
@@ -26,3 +26,4 @@
 
 </body>
 </html>
+</head>
