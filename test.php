@@ -10,6 +10,9 @@
 
 <link rel="stylesheet" href=".../var/www/net302/webiste.css" type="text/css">
 
+<style>
+</style>
+
 <div class="header">
   <h1>My Website</h1>
   <p>Resize the browser window to see the effect.</p>
