@@ -4,7 +4,7 @@
 
 <html>
 <head>
-<link rel="stylesheet" href="website.css" type="text/css"/>
+<link rel="stylesheet" href="webiste.css" type="text/css"/>
 </head>
 
 <body>
