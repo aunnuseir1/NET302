@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" href="website.css">
+<link rel="stylesheet" href="/var/www/net302/website.css">
 </head>
 
 <div class="header">
