@@ -41,7 +41,7 @@
     </div>
   </div>
 
-  <footer class="page-footer orange"style="position:fixed; bottom: 0px; left: 0px; width: 100%;">
+  <footer class="page-footer orange"style="position:fixed ; bottom: 0; left: 0; width: 100%;">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
