@@ -6,7 +6,7 @@
 <head>
 
 
-<link rel="stylesheet" type="text/css" href="..net302/website.css">
+<link rel="stylesheet" type="text/css" href="../var/www/net302/website.css">
 
 <link rel="stylesheet" type="text/css" href="../var/www/net302/website.css">
 </head>
