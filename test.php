@@ -1,8 +1,7 @@
 <?php
-
+session_start():
 ?>
 
-<!DOCTYPE html>
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="../net302/website.css">
@@ -15,7 +14,7 @@
 </div>
 
 <div class="topnav">
-  <a href="#" style="float:center">Homepage</a>
+  <a href="../var/www/net302/website.css" style="float:center">Homepage</a>
 </div>
 
 <div class="footer">
