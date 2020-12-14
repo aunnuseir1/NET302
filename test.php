@@ -4,8 +4,11 @@
 
 <html>
 <head>
+<<<<<<< Updated upstream
 
 <link rel="stylesheet" type="text/css" href="..net302/website.css">
+=======
+>>>>>>> Stashed changes
 <link rel="stylesheet" type="text/css" href="../var/www/net302/website.css">
 </head>
 
