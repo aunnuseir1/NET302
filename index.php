@@ -11,12 +11,7 @@ $dbconnection = $m->$dbname;
 $collection = $dbconnection->$city;
 
 // pull a cursor query
-$collections = $collection->find("plymouth");
-
-foreach ($collections as $collection) {
-    echo "amount of documents in $collection: ";
-    echo $collection->count(), "\n";
-  };
+//$collections = $collection->find($city);
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +42,7 @@ foreach ($collections as $collection) {
       <br><br>
       <h1 class="header center orange-text">Enter location</h1>
       <div class="row center">
-        <h5 class="header col s12 light">Search for the weather below</h5>
+	<h5 class="header col s12 light"> <?php echo"Search for the weather below $collection"?></h5>
       </div>
 
       <div class="row center">
