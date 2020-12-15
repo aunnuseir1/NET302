@@ -1,18 +1,7 @@
 <?php
-// Config
-$dbhost = "net302_admin:net302@52.23.213.239:27017";
-$dbname = "net302";
-$city = "plymouth";
-// Connect to test database
-$m = new MongoDB\Driver\Manager("mongodb://$dbhost");
-$dbconnection = $m->$dbname;
 
-// select the collection
-$collection = $dbconnection->$city;
-
-// pull a cursor query
-//$collections = $collection->find($city);
 ?>
+ss
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,7 +31,7 @@ $collection = $dbconnection->$city;
       <br><br>
       <h1 class="header center orange-text">Enter location</h1>
       <div class="row center">
-	<h5 class="header col s12 light"> <?php echo"Search for the weather below $collection"?></h5>
+        <h5 class="header col s12 light">Search for the weather below</h5>
       </div>
 
       <div class="row center">
