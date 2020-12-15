@@ -1,16 +1,22 @@
 <?php
+// Config
+$dbhost = "mongodb://net302_admin:net302@52.23.213.239:27017";
+$dbname = "net302";
 
-$m = new MongoDB\client("mongodb://net302_admin:net302@52.23.213.239:27017");
-$db = $m->selectDB("net302");
-$collections = $db->listCollections("plymouth");
+// Connect to test database
+$m = new Mongo("mongodb://$dbhost");
+$db = $m->$dbname;
+
+// select the collection
+$collection = $db->shows;
+
+// pull a cursor query
+$collections = $collection->find("plymouth");
 
 foreach ($collections as $collection) {
     echo "amount of documents in $collection: ";
     echo $collection->count(), "\n";
-}
-
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
