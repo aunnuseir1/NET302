@@ -1,6 +1,16 @@
 <?php
-//session_start():
+
+$m = new MongoDB\client("mongodb://net302_admin:net302@52.23.213.239:27017");
+$db = $m->selectDB("net302");
+$collections = $db->listCollections("plymouth");
+
+foreach ($collections as $collection) {
+    echo "amount of documents in $collection: ";
+    echo $collection->count(), "\n";
+}
+
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
