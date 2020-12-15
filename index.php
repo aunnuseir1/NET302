@@ -1,14 +1,14 @@
 <?php
 // Config
-$dbhost = "mongodb://net302_admin:net302@52.23.213.239:27017";
+$dbhost = "net302_admin:net302@52.23.213.239:27017";
 $dbname = "net302";
-
+$city = "plymouth";
 // Connect to test database
-$m = new Mongo("mongodb://$dbhost");
-$db = $m->$dbname;
+$m = new MongoDB\Driver\Manager("mongodb://$dbhost");
+$dbconnection = $m->$dbname;
 
 // select the collection
-$collection = $db->shows;
+$collection = $dbconnection->$city;
 
 // pull a cursor query
 $collections = $collection->find("plymouth");
@@ -16,6 +16,7 @@ $collections = $collection->find("plymouth");
 foreach ($collections as $collection) {
     echo "amount of documents in $collection: ";
     echo $collection->count(), "\n";
+  };
 ?>
 
 <!DOCTYPE html>
