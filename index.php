@@ -1,5 +1,14 @@
 <?php
 
+$message = '';
+$message = $_GET[ 'message' ];
+
+if (isset($message))
+{
+        echo "<script type='text/javascript'>alert('$message');</script>";
+
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -34,14 +43,17 @@
       </div>
 
       <div class="row center">
-        <a  id="download-button" class="btn-large waves-effect waves-light red">Search</a>
-      </div>
+      <form action="/script.php?variable =<?php echo $_POST['location']?>" method="POST">
+	<input type="text" id="location" name="location"><br><br>
+	<input type="submit"  id="location-button" class="btn-large waves-effect waves-light red"></input>
+	</form>
+	</div>
       <br><br>
 
     </div>
   </div>
 
-  <footer class="page-footer orange"style="position:fixed ; bottom: 0; left: 0; width: 100%;">
+  <footer class="page-footer orange"style="width: 100%;">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -65,3 +77,18 @@
 
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
