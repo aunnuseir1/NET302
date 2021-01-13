@@ -2,6 +2,7 @@
 #encoding: utf-8
 #!/usr/bin/env python
 
+#libaries
 import json
 import requests
 from bson import json_util
@@ -19,14 +20,9 @@ from geopy import Nominatim
 api_key = '055997a3efcd913f3ef01ff6b8eecd6a'
 api_default_url =  'http://api.openweathermap.org/data/2.5/'
 
-
 date = datetime.datetime.now()
 tdate = (date.strftime("%x"))
-
-print(sys.argv)
-
 location = sys.argv[1]
-#location = 'london'
 locator = Nominatim(user_agent="net302_aun")
 geolocation = locator.geocode(location + ",UK")
 latitude = geolocation.latitude
@@ -37,7 +33,7 @@ headers = {'Content-Type': 'application/json','Authorization': 'Bearer {0}'.form
 urlpar = 'lat={0}&lon={1}&exclude=current,minutely,hourly,alerts&units=metric&appid={2}'.format(latitude,longitude,api_key)
 
 
-#database
+#database connection details
 client = pymongo.MongoClient("mongodb://net302_admin:net302@52.23.213.239:27017")
 database = client["net302"]
 collection = database[colname]
@@ -48,7 +44,7 @@ colstr = str(collection)
 
 
 
-
+#calling the api and gets the required data.
 def get_api_data():
 
     api_url = '{0}onecall?{1}'.format(api_default_url,urlpar)
@@ -63,8 +59,8 @@ def get_api_data():
 
 api_info = get_api_data()
 
-#data = json.dumps(get_api_data())
 
+#converts the data from BSON to JSON and inserts into database. then dumps the JSON file to be used.
 def push():
     if api_info is not None:
 
@@ -79,14 +75,15 @@ def push():
 
 my_json = json.dumps(get_api_data())
 
+#checks if the input exists in the database, by running the name through the collections which exist if it exits it dumps the JSON file read for the php script to pick it up. 
 if colname in database.list_collection_names():
     for x in collection.find({}, {"_id":0 }):
         my_json = json.dumps(get_api_data())
-        print(my_json)
+
 else:
     get_api_data()
     push()
-    print(my_json)
+
 
 
 
