@@ -1,5 +1,6 @@
 <?php
 
+//displays message send from script.php
 $message = '';
 $message = $_GET[ 'message' ];
 
@@ -23,6 +24,8 @@ if (isset($message))
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
+<!-- navigation bar -->
+	
   <nav class="light-blue lighten-1" role="navigation">
     <div class="nav-wrapper container" ><a id="logo-container" href="index.php" class="brand-logo">Weather API</a>
       <ul class="right hide-on-med-and-down">
@@ -33,7 +36,7 @@ if (isset($message))
     </div>
   </nav>
 
-
+<!-- titles -->
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
@@ -42,17 +45,21 @@ if (isset($message))
         <h5 class="header col s12 light">Search for the weather below</h5>
       </div>
 
+ <!-- text box to take the user input -->
       <div class="row center">
-      <form action="/script.php?variable =<?php echo $_POST['location']?>" method="POST">
+      <form action="/script.php?variable =<?php echo $_POST['location']?>" method="POST"> //post the input 
 	<input type="text" id="location" name="location"><br><br>
-	<input type="submit"  id="location-button" class="btn-large waves-effect waves-light red"></input>
+	<input type="submit"  id="location-button" class="btn-large waves-effect waves-light red"></input> <!-- on submit the code posts the input location -->
 	</form>
 	</div>
       <br><br>
 
     </div>
   </div>
-
+	
+	
+<!-- footer with the classes to set colour  -->
+	
   <footer class="page-footer orange"style="width: 100%;">
     <div class="container">
       <div class="row">
@@ -77,18 +84,3 @@ if (isset($message))
 
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
