@@ -170,13 +170,14 @@ $array = json_decode($execute,TRUE);
       text-align: center;
     }
 </style>
+	  <!-- calls the map  -->
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js">
 </script>
 
-<!-- script to run the Google map and despaly it  -->
+<!-- api key  -->
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGOdvckPbP4AmnlWK8QZCBpU02PTlO_EU&callback=initMap" type="text/javascript"></script>
 	  
-<!-- map variables and libaries  -->
+<!-- opeweathermap api variables and libaries  -->
 <script>
   var map;
   var geoJSON;
@@ -184,6 +185,7 @@ $array = json_decode($execute,TRUE);
   var gettingData = false;
   var openWeatherMapKey = "055997a3efcd913f3ef01ff6b8eecd6a"
 
+  //calls the map and sets the lattiude and longitude by fetching the numbers from the array and zooms in on the location.
   function initialize() {
     var mapOptions = {
       zoom: 12,
